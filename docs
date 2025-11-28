@@ -1,0 +1,313 @@
+⭐ **Grey-Box Visualization Framework V3.0（Universal）
+
+— Conceptual Interpretability for Large Language Models —**
+
+Version: 3.0 (Universal Edition)
+Scope: All Transformer-based LLMs
+Purpose: Build a structured, layered visualization framework that explains how LLMs perform semantic reasoning, attention routing, decision aggregation, and corrective self-alignment during inference.
+📘 目錄（Table of Contents）
+
+Introduction
+
+Framework Overview
+
+Layer 1 — Semantic Nodes
+
+Layer 2 — Attention Mapping
+
+Layer 3 — Semantic Flow
+
+Layer 4 — Weight Heatmap
+
+Layer 5 — Flow Velocity Field
+
+Layer 6 — Intervention Ring
+
+Layer 7 — Semantic Field (NEW in V3)
+
+Cross-Layer Dynamics (NEW)
+
+Reasoning Pipeline Visualization
+
+Failure Modes & Debugging Patterns
+
+Application Domains
+
+Conclusion and Future Extensions
+
+Appendix — Diagram Specifications
+
+⭐ 1｜Introduction
+
+LLMs operate through complex high-dimensional vector transformations that are not directly observable. Traditional “Black-Box” and “White-Box” explanations are insufficient for describing the emergent semantic structures that occur during inference.
+
+Grey-Box V3 offers a conceptual visualization model that maps LLM reasoning into seven interpretable layers:
+
+Node
+
+Attention
+
+Flow
+
+Weight
+
+Velocity
+
+Intervention
+
+Semantic Field (V3 新增)
+
+This framework helps researchers, engineers, and designers understand and debug LLM behavior.
+
+⭐ 2｜Framework Overview
+
+Grey-Box V3 conceptualizes LLM reasoning as：
+
+“A cascading multi-layer semantic transformation process from tokens → embeddings → structured meaning.”
+
+Each layer provides:
+
+Structural interpretation
+
+Visualizable representation
+
+Intervention or analysis point
+
+V3 introduces two major expansions：
+
+✔ Semantic Field（語義場）
+✔ Cross-Layer Dynamics（跨層動力學）
+
+以便更完整地描述推理過程中的「收斂」與「發散」。
+
+⭐ 3｜Layer 1 — Semantic Nodes（語義節點）
+
+Token embeddings形成的局部語義單位，由：
+
+contextual vectors
+
+positional patterns
+
+latent subspace clusters
+
+構成。
+
+節點表示「語義的原子單元」。
+
+可視化方式：
+
+scatter points
+
+embedding PCA / UMAP
+
+color by similarity clusters
+
+⭐ 4｜Layer 2 — Attention Mapping（注意力映射）
+
+描述：
+
+哪個語義節點在推理過程中指向哪個節點。
+
+可視化方式：
+
+directed graph
+
+chord diagram
+
+attention matrix heatmap
+
+edge-weighted semantic graph
+
+⭐ 5｜Layer 3 — Semantic Flow（語義流）
+
+注意力矩陣整合後形成的「語義傳輸路徑」。
+
+它是：
+
+非線性
+
+多方向
+
+分層
+
+競合（competitive）
+
+收斂（convergent）
+
+語義流是 Grey-Box 的核心，是推理「過程」的主視覺。
+
+⭐ 6｜Layer 4 — Weight Heatmap（權重熱力）
+
+這一層描述：
+
+哪些語義單元被模型視為重要
+
+哪些單元被抑制
+
+哪些語義正在形成主導方向
+
+工具用：
+
+token saliency
+
+feature importance
+
+gradient-based scores
+
+⭐ 7｜Layer 5 — Flow Velocity Field（流速場）
+
+描述語義流的「強度與速度」。
+
+動態視覺化方式：
+
+vector field arrows
+
+intensity gradients
+
+turbulence vs laminar patterns
+
+揭示模型如何在推理中：
+
+收斂成最終語義
+
+或因錯誤提示進入不穩定流
+
+⭐ 8｜Layer 6 — Intervention Ring（介入環）
+
+介入環是所有可調節與導正的入口：
+
+prompt engineering
+
+constraint injection
+
+instruction reshaping
+
+bias correction
+
+safety rule reinforcement
+
+它是「外部人類可影響模型」的全部位置。
+
+⭐ **9｜Layer 7 — Semantic Field（語義場）
+
+（V3 新增）**
+
+語義場描述模型內部的：
+
+high-dimensional meaning potential landscape
+
+semantic attractor basins（語義吸引子）
+
+polarities（語義極性）
+
+drift tendencies（語義漂移）
+
+它不是流，而是：
+
+語義如何分布、聚合、排斥、形成中心。
+
+可視化：
+
+contour map
+
+potential field
+
+vector attractor plot
+
+這一層使 Grey-Box 具備「系統級推理可視化能力」。
+
+⭐ 10｜Cross-Layer Dynamics（跨層動力學）
+
+本章描述：
+
+weights 影響 flow
+
+flow 影響 field
+
+field 影響 attention
+
+attention 影響 nodes
+
+形成閉環。
+
+這是 V3 的重要新增：
+
+LLM 推理不是線性，而是多層反饋迴路。
+
+⭐ 11｜Reasoning Pipeline Visualization
+
+本章提供：
+
+token → node
+
+node → attention
+
+attention → flow
+
+flow → field
+
+field → output
+
+整體動畫化視覺。
+
+這是 V3 的主圖。
+
+⭐ 12｜Failure Modes & Debugging
+
+V3 可視化能辨識的問題：
+
+attention collapse
+
+semantic drift
+
+hallucination attractor
+
+unstable velocity field
+
+contradiction loops
+
+over-diffuse semantic field
+
+並提供對應介入方法。
+
+⭐ 13｜Application Domains
+
+Grey-Box V3 適用：
+
+AI 推理研究（reasoning interpretability）
+
+教育與模型可視化
+
+提示工程（prompt engineering）
+
+多代理系統
+
+通用型 LLM debug
+
+⭐ 14｜Conclusion
+
+V3 推出了：
+
+第七層「語義場」
+
+跨層動力學
+
+全流程可視化
+
+使灰箱模型從「靜態說明」進化為：
+
+動態推理解釋引擎（Dynamic Reasoning Interpretability Engine）。
+
+⭐ 15｜Appendix — Diagram Specification
+
+提供：
+
+六層圖
+
+七層場域圖
+
+符號定義
+
+視覺參考
+
+色彩建議
