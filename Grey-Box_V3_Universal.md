@@ -338,3 +338,9 @@ Colors, labels, and formatting can be standardized for tooling.
 # End of Document
 
 Grey-Box Visualization Framework V3.0 — Universal Edition.
+
+---
+### 版權與歸屬 (Attribution)
+
+Grey-Box Visualization Framework V3.0 (Universal Edition) 概念設計版權所有 © 2025 swmlucky-sudo。
+如果您在其他研究或工具中使用了本框架的七層或跨層動態概念，請註明作者歸屬。
