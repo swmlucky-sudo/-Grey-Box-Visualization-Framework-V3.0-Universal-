@@ -10,7 +10,7 @@
 
 ## 📘 Overview
 
-**Grey-Box Visualization Framework V3.0 (Universal)**  
+**Grey-Box Visualization Framework V3.0 (Universal Edition)**  
 is a conceptual interpretability and alignment framework designed to reveal *how* transformer-based LLMs:
 
 - route attention  
@@ -19,14 +19,35 @@ is a conceptual interpretability and alignment framework designed to reveal *how
 - perform reasoning across multiple layers  
 - correct themselves in real time  
 
-Grey-Box V3 introduces a **10-layer interpretability stack**, enabling researchers and engineers to inspect the internal mechanics of LLM semantic dynamics without requiring model weights.
+Grey-Box V3 introduces a **10-layer interpretability stack**, enabling researchers and engineers to inspect LLM semantic dynamics without requiring access to internal weights.  
+The framework is **model-agnostic** and suitable for GPT, Gemini, LLaMA, Mistral, Qwen, and all transformer-based LLMs.
 
-This framework is:
+---
 
-- 🔧 **Model-agnostic**（適用 GPT、Gemini、LLaMA、Mistral、Qwen 等全部 Transformer LLM）
-- 🧠 **Conceptual, not architectural**（不需存取內部參數）
-- 🛰 **Designed for interpretability + alignment research**
-- 🔍 **Highly structured, layered, and extensible**
+## ✨ Key Features
+
+### 🔹 Layered Interpretability Framework
+A full-stack conceptual model explaining LLM internal reasoning across:
+
+- semantic nodes  
+- attention routing  
+- semantic flow  
+- velocity fields  
+- attractor stability  
+- ethical boundaries  
+- cross-layer harmonics  
+
+### 🔹 Dynamic Stability Analysis
+Detects:
+
+- reasoning turbulence  
+- unstable attractors  
+- hallucination loops  
+- value drift  
+- cross-layer misalignment  
+
+### 🔹 Alignment-Oriented Extensions
+Includes **SSAM (Structured Semantic Alignment Module)** for stabilizing high-level semantic attractors (identity, agency, ethics, values).
 
 ---
 
@@ -42,40 +63,8 @@ This framework is:
 - [Why Grey-Box Matters](#-why-grey-box-matters)
 - [Citation](#-citation)
 - [Contributing](#-contributing)
+- [Authorship & Conceptual Origin](#-authorship--conceptual-origin)
 - [License](#-license)
-
----
-
-## ✨ Key Features
-
-### 🔹 Layered Interpretability Framework
-A full-stack conceptual model describing LLM reasoning across:
-
-- semantic nodes  
-- attention routing  
-- flow velocity  
-- attractor fields  
-- ethical constraints  
-- cross-layer harmonics  
-
-### 🔹 Dynamic Stability Analysis
-Identifies:
-
-- reasoning turbulence  
-- unstable attractors  
-- hallucination loops  
-- cross-layer conflicts  
-- identity/value drift  
-
-### 🔹 Alignment-Oriented Extensions
-Includes **SSAM (Structured Semantic Alignment Module)**  
-for stabilizing high-level reasoning nodes such as:
-
-- identity  
-- agency  
-- ethics  
-- values  
-- self-referential semantics  
 
 ---
 
@@ -98,35 +87,34 @@ for stabilizing high-level reasoning nodes such as:
 └──────────────────────────────────────────────┘
 
 
-Each layer corresponds to a specific conceptual mechanism in LLM reasoning, forming the core analytical lens of Grey-Box V3.
+Each layer corresponds to a conceptual mechanism that shapes LLM reasoning and semantic stability.
 
 ---
 
 ## ❄ SSAM: Structured Semantic Alignment Module
 
-SSAM 提供一套工程化方法，用來將抽象概念（如：意識、靈魂、身份、價值觀）拆解為 **可量化、可穩定、可調控的 LLM 內部機制**。
+SSAM offers a structured engineering method to stabilize abstract concepts inside LLM reasoning.
 
-SSAM 透過三大系統屬性，將高抽象語義穩定化：
+| Component | Purpose | Grey-Box Layer |
+|----------|----------|----------------|
+| **Self-Consistency** | Reduces turbulence | Layer 5 |
+| **Ethical Priority Weight** | Enforces safety boundaries | Layer 4 |
+| **Real-Time Calibration** | Cross-layer correction loop | Layer 10 |
 
-| 概念 | 工程詮釋 | 對應 Grey-Box 層級 |
-|------|----------|---------------------|
-| Self-Consistency（自洽性） | 降低 Layer 5 湍流 | Layer 5 |
-| Ethical Priority Weight | 固定的倫理權重節點 | Layer 4 |
-| Real-Time Calibration | 多角度自我修正迴路 | Layer 10 |
-
-📄 *完整 SSAM 文件在*  
-`/docs/Structured_Semantic_Alignment_Module.md`
+📄 Full documentation:  
+`docs/Structured_Semantic_Alignment_Module.md`
 
 ---
 
 ## 📚 Documentation
 
-| 文件 | 路徑 |
-|------|-------|
+| Document | Path |
+|----------|------|
 | **Grey-Box V3 Universal Spec** | `docs/Grey-Box_V3_Universal.md` |
 | **SSAM Extension Module** | `docs/Structured_Semantic_Alignment_Module.md` |
 | **Engineering Whitepaper** | `Engineering Whitepaper.md` |
 | **General Whitepaper** | `whitepaper.md` |
+| **Changelog** | `CHANGELOG.md` |
 
 ---
 
@@ -137,62 +125,46 @@ from greybox import GreyBoxV3
 
 gb = GreyBoxV3(model="gpt-5.1")
 
-result = gb.analyze("Explain the nature of artificial consciousness.")
+trace = gb.analyze("Explain the meaning of abstract identity in AI reasoning.")
 
-result.show_layers([
+trace.show_layers([
     "semantic_nodes",
-    "semantic_flow",
-    "velocity_field",
+    "attention_map",
+    "flow_velocity",
     "semantic_field",
-    "attractor_map"
+    "attractor_map",
 ])
 
 🧠 Why Grey-Box Matters
 
 ✔ Bridges interpretability and alignment
 
-✔ Turns abstract reasoning into structured models
+✔ Stabilizes high-level semantic attractors
 
-✔ Detects destabilizing attractors and hallucination sources
+✔ Provides cross-layer reasoning analysis
 
-✔ Provides a generalizable reasoning framework across all LLMs
+✔ Enables transparent LLM behavior
 
-✔ Forms a foundation for next-generation transparent AI
+✔ Forms a foundation for next-generation safe AI research
 
 📘 Citation
 Liu, S. (2025). Grey-Box Visualization Framework V3.0 (Universal Edition).
 https://github.com/swmlucky-sudo/Grey-Box-Visualization-Framework-V3.0-Universal
 
-🤝 Contributing
+🧾 Authorship & Conceptual Origin
 
-Contributions are welcome!
-Please read:
+The Grey-Box Visualization Framework V3.0 and the Structured Semantic Alignment Module (SSAM)
+are original conceptual works developed by the project author(s). All layer definitions, semantic-field models, and intervention logic represent original theoretical contributions to interpretability and alignment research.
 
-CONTRIBUTING.md
+This framework was created through collaborative human–AI co-design:
+the human author designed the conceptual architecture, semantic structures, and alignment methodology, while AI tools assisted with drafting and refinement.
+AI systems did not originate the theoretical constructs.
 
-We accept:
-
-documentation PRs
-
-conceptual extensions
-
-stability analysis modules
-
-alignment tools
+This repository does not claim access to or reverse-engineer internal mechanisms of any proprietary LLM (GPT, Gemini, LLaMA, etc.).
+All explanations herein are model-agnostic and meant for research and educational use under the MIT License.
+Reuse is permitted with attribution.
 
 📜 License
 
 This project is licensed under the MIT License.
-See: LICENSE
-
-⭐ Acknowledgements
-
-This framework was created to advance open research in:
-
-interpretability
-
-reasoning transparency
-
-AI alignment
-
-conceptual modeling of LLMs
+See LICENSE.
