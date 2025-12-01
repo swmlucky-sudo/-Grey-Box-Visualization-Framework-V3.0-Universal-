@@ -62,7 +62,38 @@ Grey-Box V3 defines the following conceptual layers:
 These seven layers together form a **dynamic reasoning interpretability engine** for LLMs.
 
 ---
+📚 Documentation
 
+The Grey-Box Visualization Framework V3.0 (Universal Edition) includes complete modular documentation covering conceptual theory, engineering methods, semantic alignment extensions, and whitepapers.
+
+Core Framework Docs
+
+📘 Grey-Box Framework V3.0 (Universal)
+docs/Grey-Box_V3_Universal.md
+
+Alignment & Interpretability Extensions
+
+🧊 Structured Semantic Alignment Module (SSAM)
+Engineering method for stabilizing high-level semantic attractors
+docs/Structured_Semantic_Alignment_Module.md
+
+Whitepapers
+
+📄 Engineering Whitepaper
+Full conceptual and architectural explanation
+Engineering Whitepaper.md
+
+📑 Grey-Box V3 Whitepaper
+High-level formalization for research and publication use
+whitepaper.md
+
+Project Metadata
+
+📝 CHANGELOG — Version history
+CHANGELOG.md
+
+🤝 CONTRIBUTING Guide — For collaborators
+CONTRIBUTING.md
 ## 📂 Repository Structure
 
 ```text
