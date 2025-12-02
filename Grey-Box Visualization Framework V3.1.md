@@ -3,7 +3,7 @@ A Structured Interpretability Language for Transformer-based LLMs
 0. Mathematical Symbolism Disclaimer
 > NOTE: 本文件包含大量概念性數學符號。
 > GitHub Markdown 不支援 LaTeX，公式將不會被渲染。
-> 請在 HuggingFace 或 PDF 版本查看完整公式排版。
+>
 
 
 The mathematical notation used in Grey-Box V3.1 (e.g., Φ_S(x), C_F(t), 
@@ -527,9 +527,8 @@ S
 
 穩定度 → 決定語義位置
 
-這是 Grey-Box 的範疇論式結構。
 
-⭐ 5. Final Notes (可放在文件末尾)
+⭐ 5. Final Notes 
 Grey-Box V3.1 transforms abstract interpretability intuition into a 
 structured formal language. The mathematical notation does not perform 
 computation; it provides conceptual coordinates for analyzing semantic 
