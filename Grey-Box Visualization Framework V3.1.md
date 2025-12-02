@@ -1,6 +1,9 @@
 📘 Grey-Box Visualization Framework V3.1 — Formal Edition
 A Structured Interpretability Language for Transformer-based LLMs
 0. Mathematical Symbolism Disclaimer
+> NOTE: 本文件包含大量概念性數學符號。
+> GitHub Markdown 不支援 LaTeX，公式將不會被渲染。
+> 請在 HuggingFace 或 PDF 版本查看完整公式排版。
 
 
 The mathematical notation used in Grey-Box V3.1 (e.g., Φ_S(x), C_F(t), 
