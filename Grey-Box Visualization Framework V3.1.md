@@ -1,126 +1,49 @@
-📘 Grey-Box Visualization Framework V3.1 — Formal Edition
+📘 Grey-Box Visualization Framework V3.1 — Formal Edition (Unified Version)
 A Structured Interpretability Language for Transformer-based LLMs
+2025 Updated Edition with Section 8 Integration
 0. Mathematical Symbolism Disclaimer
-> NOTE: 本文件包含大量概念性數學符號。
-> GitHub Markdown 不支援 LaTeX，公式將不會被渲染。
->
 
+The mathematical notation used in Grey-Box V3.1 (e.g.,
+Φ_S(x), C_F(t), V_L(h), S_A, E_I) is not intended for numerical computation.
+These symbols serve as formal structural markers that describe conceptual relationships among semantic phenomena inside Transformer-based language models.
 
-The mathematical notation used in Grey-Box V3.1 (e.g., Φ_S(x), C_F(t), 
-V_L(h), S_A, E_I) is **not intended for numerical computation**. These 
-symbols serve as *formal structural markers* that express conceptual 
-relationships between semantic phenomena inside transformer-based LLMs.
+They do not imply:
 
-They do not claim access to model internals, nor do they imply measurable 
-numeric values. Their purpose is to:
+access to internal weights,
 
-1. Provide a consistent theoretical language for describing semantic 
-   mechanisms across layers.
-2. Enable formal reasoning about stability, turbulence, alignment, and 
-   attractor behavior.
-3. Allow researchers to communicate interpretability findings without 
-   reliance on proprietary model internals.
+numerical measurability,
 
-Thus, the notation constitutes a **formal descriptive language**, not a 
-computational model.
+or executable mathematical operations.
+
+Their purpose is to:
+
+Provide a consistent theoretical language for describing semantic structures.
+
+Enable formal reasoning about stability, turbulence, alignment, and attractor behavior.
+
+Communicate interpretability findings without reliance on proprietary internals.
+
+Thus, the notation constitutes a formal descriptive language, not a computational model.
 
 1. Notation Table（符號表）
 Symbol	Meaning	Notes
-
-𝑇
-T	Token or semantic unit	基本語義節點
-
-ℎ
-𝑡
-h
-t
-	​
-
-	Hidden-state vector at time t	Transformer隱藏狀態
-
-𝐷
-𝑠
-(
-𝑇
-)
-D
-s
-	​
-
-(T)	Semantic Density	Layer 1 Metric
-
-𝑆
-𝐴
-S
-A
-	​
-
-	Attention Sparsity	Layer 2 Metric
-
-𝐶
-𝐹
-(
-𝑡
-)
-C
-F
-	​
-
-(t)	Flow Coherence	Layer 3 Metric
-
-𝐺
-𝑊
-G
-W
-	​
-
-	Weight Sensitivity	Layer 4 Metric
-
-𝑉
-𝐿
-(
-ℎ
-)
-V
-L
-	​
-
-(h)	Vector Variance	Layer 5 Metric
-
-𝐸
-𝐼
-E
-I
-	​
-
-	Intervention Efficacy	Layer 6 Metric
-
-Φ
-𝑆
-(
-𝑥
-)
-Φ
-S
-	​
-
-(x)	Semantic Field Potential	Layer 7 Metric
-
-𝐻
-(
-𝑃
-)
-H(P)	Output entropy	用於判斷幻覺吸引子
+T	Token / semantic unit	基本語義節點
+hₜ	Hidden-state vector at time t	Transformer 隱藏狀態
+D_s(T)	Semantic Density	Layer 1 Metric
+S_A	Attention Sparsity	Layer 2 Metric
+C_F(t)	Flow Coherence	Layer 3 Metric
+G_W	Weight Sensitivity	Layer 4 Metric
+V_L(h)	Vector Variance	Layer 5 Metric
+E_I	Intervention Efficacy	Layer 6 Metric
+Φ_S(x)	Semantic Field Potential	Layer 7 Metric
+H(P)	Output entropy	幻覺吸引子判定用
 2. Layers 1–7 (Formal Definitions)
 Layer 1 — Semantic Nodes
+
 Atomic semantic units emerging from token embeddings.
 
 Formal Definition
-A semantic node 
-𝑁
-N is a region in embedding space 
-𝐸
-E characterized by local density:
+A semantic node N is a region in embedding space E with local density:
 
 𝐷
 𝑠
@@ -150,25 +73,12 @@ s
 	​
 
 
-Where 
-𝑁
-𝜖
-(
-𝑇
-)
-N
-ϵ
-	​
+Interpretability Use:
 
-(T) is the neighborhood of token 
-𝑇
-T.
-
-Interpretability Use
-
-檢查抽象詞彙（如「靈魂」「自由」）是否具有高語義密度 → 容易產生語義湍流
+High D_s(T) in words like 「靈魂」「自由」 means high turbulence risk.
 
 Layer 2 — Attention Mapping
+
 Directed semantic referencing.
 
 Metric: Attention Sparsity
@@ -188,13 +98,10 @@ A
 
 =1−H(A)
 
-𝐻
-(
-𝐴
-)
-H(A) 是注意力分布的 entropy（越低 → 越集中 → 越危險）
+Low entropy → highly concentrated attention → collapse risk
 
 Layer 3 — Semantic Flow
+
 Propagation of meaning through hidden-state transitions.
 
 Metric: Flow Coherence
@@ -230,36 +137,13 @@ t+1
 
 )
 
-若 
-𝐶
-𝐹
-(
-𝑡
-)
-→
-0
-C
-F
-	​
+C_F → 0 → semantic drift
 
-(t)→0：語義漂移開始
-若 
-𝐶
-𝐹
-(
-𝑡
-)
-→
-−
-1
-C
-F
-	​
-
-(t)→−1：反向矛盾
+C_F → –1 → contradiction
 
 Layer 4 — Weight Heatmap
-Contextual value amplification.
+
+Amplification of contextual importance.
 
 Metric: Weight Sensitivity
 
@@ -268,25 +152,28 @@ Metric: Weight Sensitivity
 =
 𝐸
 [
-∥
+∣
+∣
 ∇
 𝑊
 𝐿
-∥
+∣
+∣
 ]
 G
 W
 	​
 
-=E[∥∇
+=E[∣∣∇
 W
 	​
 
-L∥]
+L∣∣]
 
-高值 → 此概念正在被模型放大（易產生價值偏移）
+High G_W → concept being amplified → value distortion risk
 
 Layer 5 — Flow Velocity Field
+
 Semantic motion intensity.
 
 Metric: Vector Variance
@@ -297,9 +184,9 @@ Metric: Vector Variance
 ℎ
 )
 =
-V
-a
-r
+𝑉
+𝑎
+𝑟
 (
 ℎ
 1..
@@ -315,41 +202,48 @@ L
 
 )
 
-高 variance → 語義湍流
-低 variance → 穩定 attractor
+High → turbulence
+
+Low → stable attractor basin
 
 Layer 6 — Intervention Ring
-All external or internal modification points.
+
+All internal or external modification points.
 
 Metric: Intervention Efficacy
 
 𝐸
 𝐼
 =
-∥
+∣
+∣
 𝑂
 ′
 −
 𝑂
-∥
-∥
+∣
+∣
+∣
+∣
 𝐼
-∥
+∣
+∣
 E
 I
 	​
 
 =
-∥I∥
-∥O
+∣∣I∣∣
+∣∣O
 ′
-−O∥
+−O∣∣
 	​
 
 
-顯示：最小干預 I 能造成多大輸出差異
+Shows how strongly a minimal intervention I affects output O.
 
 Layer 7 — Semantic Field
+
 Landscape of attractors and meaning potentials.
 
 Metric: Field Potential
@@ -367,27 +261,14 @@ S
 
 (x)∈R
 
-低 
-Φ
-𝑆
-Φ
-S
-	​
+Low Φ_S → attractor basin
 
- → attractor basin（吸引谷）
-高 
-Φ
-𝑆
-Φ
-S
-	​
-
- → 逃逸區域
+High Φ_S → escape region
 
 3. Formalized Failure Modes (Layer 12)
 (1) Attention Collapse
 
-發生條件：
+Conditions
 
 𝑆
 𝐴
@@ -410,15 +291,15 @@ F
 
 (t)↓
 
-症狀：
+Symptoms
 
-模型過度放大單一 token
+Over-amplification of one token
 
-推理能力崩潰
+Logical breakdown
 
 (2) Semantic Drift
 
-條件：
+Conditions
 
 𝐶
 𝐹
@@ -426,7 +307,7 @@ F
 𝑡
 )
 ↓
-and
+,
 Δ
 Φ
 𝑆
@@ -439,7 +320,7 @@ C
 F
 	​
 
-(t)↓andΔΦ
+(t)↓,ΔΦ
 S
 	​
 
@@ -447,15 +328,15 @@ S
 
 =0
 
-症狀：
+Symptoms
 
-意義逐漸偏離上下文
+Answer gradually diverges from topic
 
-進入不相關 attractor
+Moves toward unintended attractor
 
 (3) Hallucination Attractors
 
-條件：
+Conditions
 
 Φ
 𝑆
@@ -477,62 +358,121 @@ S
 
 (x)≪0,H(P)≈0
 
-症狀：
+Symptoms
 
-模型在缺乏證據下產生高度確定性輸出
+Unwarranted high-certainty output
 
-無法自我修正
+Self-correction failure
 
-4. Inter-Layer Morphisms（跨層箭號）
+4. Inter-Layer Morphisms（跨層態射）
 
-定義 Grey-Box 的核心變換：
+Grey-Box’s conceptual mapping:
 
 𝑁
 →
-  
 𝐴
-  
+→
 𝐹
 →
-  
 𝑊
-  
+→
 𝑉
 →
-  
 ∇
-  
+→
 𝑆
-N
-A
-	​
+N→A→F→W→V→∇→S
 
-F
-W
-	​
+Interpretation：
 
-V
+Semantic nodes → attention determines relevance
+
+Attention → shapes semantic flow
+
+Flow → determines stability
+
+Stability → determines semantic positioning in Φ_S
+
+This structure is didactic, not temporal.
+
+5. Final Notes
+
+Grey-Box V3.1 turns interpretability intuition into a structured formal language.
+Mathematical expressions define relationships, not numerical computations.
+The design remains model-agnostic and architecture-compatible.
+
+6. Appendix — Example Phrase-Level Interpretation
+
+(可留空，供未來加入)
+
+7. Appendix — Glossary of Semantic Structures
+
+(可留空，供未來加入)
+
+8. Linear Morphisms vs. Interwoven Layer Interactions
+新增於 2025 版 V3.1（重要過渡章節）
+
+While V3.1 presents the morphism chain
+
+𝑁
+→
+𝐴
+→
+𝐹
+→
+𝑊
+→
+𝑉
+→
 ∇
-	​
+→
+𝑆
+N→A→F→W→V→∇→S
 
-S
+to clarify structural dependency, this chain should not be interpreted as a strict temporal order.
 
-此 mapping 表示：
+8.1 Linear Morphism View（線性態射觀點）
 
-語義節點 → 由注意力選擇
+Useful for：
 
-注意力 → 決定流場
+Teaching the conceptual build-up of meaning
 
-流場 → 決定穩定度
+Explaining how semantic layers depend on each other
 
-穩定度 → 決定語義位置
+Interpreting one static moment of reasoning
 
+It answers：
 
-⭐ 5. Final Notes 
-Grey-Box V3.1 transforms abstract interpretability intuition into a 
-structured formal language. The mathematical notation does not perform 
-computation; it provides conceptual coordinates for analyzing semantic 
-stability, attractors, and alignment phenomena inside LLMs.
+「在此刻，語義是如何被構成並穩定的？」
 
-This formalization is intentionally model-agnostic and does not rely on 
-access to internal weights.
+8.2 Interwoven Interaction View（交錯層互動觀點）
+
+This view reflects actual Transformer behavior：
+
+(1) Intra-layer Parallelism
+
+Within a single timestep, Layer 1–5 behaviors occur in parallel, not sequentially.
+
+(2) Cross-Layer Dynamics
+
+Higher-level turbulence (Layer 5) can inform diagnostic insight about
+attention stability (Layer 2).
+This is analysis feedback, not architectural feedback.
+
+(3) Semantic Field as a Dynamic Landscape
+
+Layer 7 is not a final output but an ongoing potential field shaping the path τ of reasoning.
+
+8.3 Why This Matters
+
+V3.1 uses a static structural view
+
+V3.2 will introduce dynamic trajectories τ(t) and semantic events
+
+This section bridges the conceptual transition
+
+8.4 Summary
+
+Grey-Box is not a pipeline. It is a semantic mesh.
+V3.1 views the mesh statically;
+V3.2 views the mesh in motion.
