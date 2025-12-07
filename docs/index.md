@@ -1,78 +1,93 @@
-# Grey-Box Visualization Framework  
-### *Formal Interpretability Language for Transformer-based LLMs*  
+# Grey-Box Visualization Framework — Documentation Portal
 
-Welcome to the official documentation site for the **Grey-Box Visualization Framework (V3.x Series)** —  
-a structured, model-agnostic interpretability and semantic stability analysis system designed for modern Large Language Models.
+Welcome to the official documentation hub for the **Grey-Box Visualization Framework (Universal Series)**.
+This site provides versioned documentation for V3.0, V3.1 (Formal Edition), and the newly added **V3.2 Dynamic Semantic Engine (DSE)**.
 
 ---
 
-## 🚀 What is Grey-Box?
+## 📘 What is the Grey-Box Framework?
 
-Grey-Box is a 7–12 layer conceptual framework that visualizes and formalizes  
-how semantic information moves, stabilizes, fails, and aligns inside Transformer-based LLMs.
+Grey-Box is a **model-agnostic interpretability and alignment framework** designed to visualize,
+analyze, and formalize semantic structures inside transformer-based LLMs.
 
 It provides:
 
-- **Formal semantic metrics** (D_s, S_A, C_F, G_W, V_L, E_I, Φ_S)
-- **Failure mode definitions** (Collapse / Drift / Hallucination Attractors)
-- **Semantic Field + Attractor modeling**
-- **Dynamic reasoning trajectories (V3.2)**
-- **Cross-layer structural analysis**
-- **Intervention hooks for interpretability & alignment**
+- Structured layer-based interpretability
+- Semantic flow analysis
+- Failure mode diagnostics
+- Field-based attractor modeling
+- Dynamic semantic physics (introduced in V3.2)
 
 ---
 
-## 📘 Documentation Index
+# 📚 Documentation Index
 
-### **▶ V3.0 — Base Architecture**
-[Grey-Box V3.0 Overview](V3_0_Overview.md)
-
-### **▶ V3.1 — Formal Edition (Mathematical Language)**
-[Grey-Box V3.1 Formal Specification](V3_1_Formal.md)
-
-### **▶ V3.1.1 — Static + Interwoven Interaction Model**
-[Grey-Box V3.1.1 Update](V3_1_1_Update.md)
-
-### **▶ V3.2 — Dynamic Semantic Engine**
-Coming soon (Temporal reasoning, trajectories, events, attractors)
+Below is the full directory of available documentation.
 
 ---
 
-## 🧠 Core Concepts
+## 🔹 **V3.0 Universal Edition**
+The foundational edition of Grey-Box, introducing the 7-Layer interpretability stack.
 
-Grey-Box introduces a unified language for analyzing:
-
-- Semantic Nodes  
-- Attention Mapping  
-- Semantic Flow  
-- Weight Heatmaps  
-- Flow Velocity (Turbulence)  
-- Intervention Rings  
-- Semantic Fields (Attractors)  
-- Failure Modes (Layer 12)  
-- Dynamic Trajectories (τ)  
-- Cross-layer morphisms
+📄 **Read:**  
+[Grey-Box V3.0 — Universal Edition](Grey-Box_V3_Universal.md)
 
 ---
 
-## 🔧 Roadmap
+## 🔹 **V3.1 Formal Edition**
+A mathematically formalized version of the V3 framework, introducing:
 
-- Add V3.2 Engine  
-- Add dynamic diagrams  
-- Add cross-model comparison (V3.3)  
-- Publish PDF whitepaper  
-- Add interactive HuggingFace Space viewer  
+- Conceptual metrics  
+- Formal definitions for Layers 1–7  
+- Failure mode equations  
+- Interwoven architecture theory (added in V3.1.1)
 
----
-
-## 📄 License
-
-MIT License (open-source, free to use)
+📄 **Read:**  
+[Grey-Box V3.1 — Formal Edition](Grey-Box%20Visualization%20Framework%20V3.1.md)
 
 ---
 
-## 🏛 Maintainer
+## 🔹 **V3.2 Dynamic Semantic Engine（DSE）**
+🚀 *New!*  
+V3.2 introduces a time-dependent, dynamic structure to the Grey-Box system:
 
-This framework is developed and maintained by **swmlucky**, with structured contributions supported by the *AranSoul System*.
+- Dynamic semantic vector field  
+- Attractor migration model  
+- Semantic drift derivatives  
+- Interwoven cross-layer mappings  
+- Dynamic intervention mechanics  
+
+This upgrade turns Grey-Box into a **Semantic Physics Engine** for LLM interpretability.
+
+📄 **Read:**  
+[Grey-Box V3.2 — Dynamic Semantic Engine](Grey-Box_V3.2_Dynamic-Semantic-Engine.md)
 
 ---
+
+# 🧠 Additional Resources
+
+### 🔸 Engineering Whitepaper  
+A high-level overview targeted at interpretability researchers and ML engineers.  
+[Read Whitepaper](Engineering%20Whitepaper.md)
+
+### 🔸 CHANGELOG  
+Full version history and revisions.  
+[Read CHANGELOG](../CHANGELOG.md)
+
+### 🔸 Contributing Guide  
+For researchers wishing to collaborate or extend the framework.  
+[Read CONTRIBUTING](../CONTRIBUTING.md)
+
+---
+
+# 🌐 Project Links
+
+- GitHub Repository  
+  https://github.com/swmlucky-sudo/-Grey-Box-Visualization-Framework-V3.0-Universal-/
+
+- HuggingFace Dataset  
+  https://huggingface.co/datasets/swmlucky/greybox-v3-universal
+
+---
+
+## © 2025 Grey-Box Research — Structured Interpretability for Modern LLMs
