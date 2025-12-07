@@ -1,53 +1,57 @@
-name: Deploy MkDocs to GitHub Pages
+site_name: Grey-Box Visualization Framework V3.x (Universal Series)
+site_url: https://swmlucky-sudo.github.io/-Grey-Box-Visualization-Framework-V3.0-Universal-/
+site_description: >
+  Grey-Box Visualization Framework V3.x — a layered interpretability and
+  alignment framework for transformer-based LLMs, including V3.0 Universal,
+  V3.1 Formal Edition, V3.1.1 Interwoven Update, and V3.2 Dynamic Semantic Engine.
 
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+repo_name: swmlucky-sudo/-Grey-Box-Visualization-Framework-V3.0-Universal-
+repo_url: https://github.com/swmlucky-sudo/-Grey-Box-Visualization-Framework-V3.0-Universal-/
+edit_uri: edit/main/docs/
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+docs_dir: docs
+site_dir: site
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: amber
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+    - content.code.copy
+    - content.tabs.link
+    - navigation.footer
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+nav:
+  - Home: index.md
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
+  - Grey-Box V3 Series:
+      - "V3.0 Universal Overview": greybox-v3-0-overview.md
+      - "V3.1 Formal Edition": greybox-v3-1-formal.md
+      - "V3.1.1 Interwoven Update": greybox-v3-1-1-update.md
+      - "V3.2 Dynamic Semantic Engine": greybox-v3-2-dynamic-semantic-engine.md
 
-      - name: Install MkDocs and Material theme
-        run: |
-          pip install mkdocs-material
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - tables
+  - footnotes
+  - def_list
+  - attr_list
+  - codehilite
+  - fenced_code
+  - md_in_html
 
-      - name: Build MkDocs site
-        run: |
-          mkdocs build --strict
+plugins:
+  - search
 
-      - name: Upload built site as artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./site
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+extra:
+  generator: false
