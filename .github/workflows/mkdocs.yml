@@ -1,55 +1,15 @@
-name: Deploy MkDocs to GitHub Pages
+nav:
+  - Home: index.md
 
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+  - Grey-Box V3 Series:
+      - "V3.0 Universal Overview": greybox-v3-0-overview.md
+      - "V3.1 Formal Edition": greybox-v3-1-formal.md
+      - "V3.1.1 Interwoven Update": greybox-v3-1-1-update.md
+      - "V3.2 Dynamic Semantic Engine": greybox-v3-2-dynamic-semantic-engine.md
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+  - Modules:
+      - "Structured Semantic Alignment Module": greybox-structured-semantic-alignment-module.md
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-
-      - name: Install MkDocs and Material theme
-      #- 你要是覺得以後還要加外掛，可以在這裡一起 pip install
-        run: |
-          pip install mkdocs-material
-
-      - name: Build MkDocs site
-        run: |
-          mkdocs build --strict
-
-      - name: Upload built site as artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./site
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+  - Whitepaper: engineering-whitepaper.md
+  - Changelog: changelog.md
+  - Contributing: contributing.md
