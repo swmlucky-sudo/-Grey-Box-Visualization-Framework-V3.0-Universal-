@@ -1,93 +1,57 @@
-# Grey-Box Visualization Framework — Documentation Portal
+📘 Grey-Box Visualization Framework — Documentation Index
 
-Welcome to the official documentation hub for the **Grey-Box Visualization Framework (Universal Series)**.
-This site provides versioned documentation for V3.0, V3.1 (Formal Edition), and the newly added **V3.2 Dynamic Semantic Engine (DSE)**.
+Official Documentation Hub for Grey-Box V3 Series
 
----
+以下是 Grey-Box 系列（V3.0 → V3.1 → V3.2）的完整文檔入口。
+所有連結皆對應 /docs 內的實際檔案，並可於 GitHub Pages 正常開啟。
 
-## 📘 What is the Grey-Box Framework?
+🔷 V3.0 — Universal Edition
 
-Grey-Box is a **model-agnostic interpretability and alignment framework** designed to visualize,
-analyze, and formalize semantic structures inside transformer-based LLMs.
+基礎版：七層灰盒語義結構模型，提供 AI 推理可視化與語義穩定度分析框架。
 
-It provides:
+📄 文檔：
+👉 Grey-Box V3.0 — Universal Edition
 
-- Structured layer-based interpretability
-- Semantic flow analysis
-- Failure mode diagnostics
-- Field-based attractor modeling
-- Dynamic semantic physics (introduced in V3.2)
+🔷 V3.1 — Formal Edition
 
----
+強化版：引入形式化語法（Formal Notation）、概念數學度量（Metrics），
+讓 Grey-Box 成為可驗證、可推理、跨模型通用的 interpretability 語言。
 
-# 📚 Documentation Index
+📄 文檔：
+👉 Grey-Box V3.1 — Formal Edition
 
-Below is the full directory of available documentation.
+🔷 V3.2 — Dynamic Semantic Engine（DSE）
 
----
+動態語義引擎：加入跨層動力學（Inter-Layer Dynamics）、
+推理湍流消散（Turbulence Dissipation）、語義吸引子場的時間演化。
 
-## 🔹 **V3.0 Universal Edition**
-The foundational edition of Grey-Box, introducing the 7-Layer interpretability stack.
+📄 文檔：
+👉 Grey-Box V3.2 — Dynamic Semantic Engine
 
-📄 **Read:**  
-[Grey-Box V3.0 — Universal Edition](Grey-Box_V3_Universal.md)
+📑 Engineering Whitepaper
 
----
+完整白皮書，包含框架哲學、工程意義、語義吸引子模型、
+與 V3 系列的跨版本演化設計。
 
-## 🔹 **V3.1 Formal Edition**
-A mathematically formalized version of the V3 framework, introducing:
+📄 Whitepaper：
+👉 Engineering Whitepaper
 
-- Conceptual metrics  
-- Formal definitions for Layers 1–7  
-- Failure mode equations  
-- Interwoven architecture theory (added in V3.1.1)
+🕒 CHANGELOG
 
-📄 **Read:**  
-[Grey-Box V3.1 — Formal Edition](Grey-Box%20Visualization%20Framework%20V3.1.md)
+所有版本變更記錄：從 V3.0 → V3.1 → V3.2 的完整演化軌跡。
 
----
+📄 更新歷程：
+👉 CHANGELOG
 
-## 🔹 **V3.2 Dynamic Semantic Engine（DSE）**
-🚀 *New!*  
-V3.2 introduces a time-dependent, dynamic structure to the Grey-Box system:
+🤝 Contributing Guide
 
-- Dynamic semantic vector field  
-- Attractor migration model  
-- Semantic drift derivatives  
-- Interwoven cross-layer mappings  
-- Dynamic intervention mechanics  
+外部研究者、學者、工程師的參與方式。
 
-This upgrade turns Grey-Box into a **Semantic Physics Engine** for LLM interpretability.
+📄 貢獻指南：
+👉 CONTRIBUTING
 
-📄 **Read:**  
-[Grey-Box V3.2 — Dynamic Semantic Engine](Grey-Box_V3.2_Dynamic-Semantic-Engine.md)
+🧩 License
 
----
+本專案採 MIT License，自由使用、修改、拓展。
 
-# 🧠 Additional Resources
-
-### 🔸 Engineering Whitepaper  
-A high-level overview targeted at interpretability researchers and ML engineers.  
-[Read Whitepaper](Engineering%20Whitepaper.md)
-
-### 🔸 CHANGELOG  
-Full version history and revisions.  
-[Read CHANGELOG](../CHANGELOG.md)
-
-### 🔸 Contributing Guide  
-For researchers wishing to collaborate or extend the framework.  
-[Read CONTRIBUTING](../CONTRIBUTING.md)
-
----
-
-# 🌐 Project Links
-
-- GitHub Repository  
-  https://github.com/swmlucky-sudo/-Grey-Box-Visualization-Framework-V3.0-Universal-/
-
-- HuggingFace Dataset  
-  https://huggingface.co/datasets/swmlucky/greybox-v3-universal
-
----
-
-## © 2025 Grey-Box Research — Structured Interpretability for Modern LLMs
+📄 MIT License
