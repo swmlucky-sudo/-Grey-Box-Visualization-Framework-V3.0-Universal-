@@ -6,8 +6,17 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,10 +28,28 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install MkDocs and theme
+      - name: Install MkDocs and Material theme
+      #- 你要是覺得以後還要加外掛，可以在這裡一起 pip install
         run: |
           pip install mkdocs-material
 
-      - name: Deploy with MkDocs
+      - name: Build MkDocs site
         run: |
-          mkdocs gh-deploy --force
+          mkdocs build --strict
+
+      - name: Upload built site as artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
