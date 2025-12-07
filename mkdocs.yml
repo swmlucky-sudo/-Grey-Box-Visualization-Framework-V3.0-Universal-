@@ -1,15 +1,26 @@
+site_name: Grey-Box Visualization Framework
+site_url: https://swmlucky-sudo.github.io/-Grey-Box-Visualization-Framework-V3.0-Universal-/
+repo_url: https://github.com/swmlucky-sudo/-Grey-Box-Visualization-Framework-V3.0-Universal-/
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.share
+
 nav:
   - Home: index.md
 
-  - Grey-Box V3 Series:
-      - "V3.0 Universal Overview": greybox-v3-0-overview.md
-      - "V3.1 Formal Edition": greybox-v3-1-formal.md
-      - "V3.1.1 Interwoven Update": greybox-v3-1-1-update.md
-      - "V3.2 Dynamic Semantic Engine": greybox-v3-2-dynamic-semantic-engine.md
+  - Grey-Box V3 系列:
+      - "V3.0 Universal Overview": V3_0_Overview.md
+      - "V3.1 Formal Edition": V3_1_Formal.md
+      - "V3.1.1 Interwoven Update": V3_1_1_Update.md
+      - "V3.2 Dynamic Semantic Engine": Grey-Box_V3.2_Dynamic-Semantic-Engine.md
 
   - Modules:
-      - "Structured Semantic Alignment Module": greybox-structured-semantic-alignment-module.md
-
-  - Whitepaper: engineering-whitepaper.md
-  - Changelog: changelog.md
-  - Contributing: contributing.md
+      - "Structured Semantic Alignment Module": Structured_Semantic_Alignment_Module.md
