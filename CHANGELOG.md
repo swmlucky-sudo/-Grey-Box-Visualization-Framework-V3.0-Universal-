@@ -1,112 +1,117 @@
-📘 CHANGELOG.md
+📝 CHANGELOG — Grey-Box Visualization Framework (Universal Series)
 
-Grey-Box Visualization Framework — Version History
+格式遵循 Semantic Versioning (MAJOR.MINOR.PATCH)
+版本說明涵蓋 Grey-Box V3.0 → V3.1 → V3.2 的框架演進。
 
-[3.0.0] — 2025-11-XX
-Major Release：Grey-Box Visualization Framework V3.0（Universal Edition）
+[3.2.0] — Dynamic Semantic Engine (DSE) — 2025-12-08
+🚀 Major Release — New Dynamic Architecture
 
-This is the first complete, model-agnostic, 7-layer formalization of the Grey-Box framework.
+This version transforms Grey-Box from a static visualization framework into a Dynamic Semantic Physics Engine for LLM interpretability.
+It introduces time-evolution operators, attractor migration models, and dynamic intervention mechanics.
 
-✨ Added
-1. Seventh Layer — Semantic Field（NEW）
+🔥 Added
 
-Introduced the concept of a high-dimensional meaning landscape.
+Dynamic Semantic Vector Field (𝑽⃗(𝒙, t))
 
-Field properties include:
+Time-dependent semantic motion representation across Layers 3–7.
 
-semantic attractor basins
+Attractor Migration Model
 
-drift tendencies
+Defines how attractors shift under new prompts or context changes.
 
-regional stability / instability
+Semantic Drift Derivative (dΦ_S / dt)
 
-potential gradients across meaning clusters
+Measures rate-of-change of meaning potential.
 
-Provides a global, system-level view of how LLM meaning converges.
+Cross-Layer Interwoven Dynamics (V3.2 core concept)
 
-2. Cross-Layer Dynamics（NEW）
+Formalizes dynamic feedback loops between Layers 1–7.
 
-Defined feedback interactions between all layers:
+Dynamic Intervention Mechanics
 
-nodes ↔ attention
+New metric for evaluating temporal influence of external modifications.
 
-attention ↔ flow
+Field Oscillation & Stabilization Theory
 
-flow ↔ weight
+Describes how hallucinations and collapse form oscillatory semantic regions.
 
-weight ↔ field
+🧩 Changed
 
-field ↔ intervention
+Upgraded Layer 7 from static potential field → time-evolving semantic landscape.
 
-Establishes the first “multi-loop reasoning engine” description for LLMs.
+Refactored Layer 5 (Flow Velocity) to incorporate temporal variance.
 
-3. Reasoning Pipeline Visualization
+Updated documentation structure to include dynamic flow equations.
 
-Token → embeddings → semantic nodes
+🛠 Fixed
 
-Attention routing → flow → field
+Clarified the relationship between Layer 3 (Flow Coherence) and Layer 7 potentials.
 
-Field collapse → output distribution
+Corrected several ambiguous definitions in V3.1 formal edition.
 
-Enables dynamic, step-by-step tracing of inference paths.
+[3.1.1] — Interwoven Model Update — 2025-12-07
+🔄 Minor Update to V3.1 Formal Edition
+🔥 Added
 
-4. Universal LLM Compatibility
+Interwoven Semantic Architecture model
 
-Framework generalized to apply to all Transformer LLMs:
+Explanation that Layers 1–7 do not operate linearly but as interacting subsystems.
 
-GPT 系列
+Added cross-layer diagrams and conceptual flow arrows.
 
-Gemini 系列
+🧩 Changed
 
-Claude
+Updated V3.1 formal documentation to include the new section:
 
-Llama
+“9. Interwoven Layer Dynamics (Non-linear Architecture)”
 
-任何 Encoder-Decoder 與 Decoder-only 架構
+🛠 Fixed
 
-Removes model-specific assumptions.
+Minor formatting issues in formula rendering in GitHub Markdown.
 
-🔧 Changed
-1. Six-Layer V2 Expanded to Seven-Layer V3
+[3.1.0] — Formal Edition Released — 2025-12-06
+🧮 Major Structural Formalization of the Framework
+🔥 Added
 
-Added an entire new reasoning layer (Semantic Field).
+Mathematical notation system (non-computational formal markers).
 
-Reinterpreted older layers to fit dynamic flow relations.
+Formal definitions for Layers 1–7:
 
-2. Terminology Standardization
+Semantic Density
 
-Unified naming for nodes, flows, velocity fields, and intervention layers.
+Attention Sparsity
 
-Clarified conceptual boundaries between saliency vs semantic flow.
+Flow Coherence
 
-3. Framework Reorganized for Clarity
+Weight Sensitivity
 
-Clear separation between:
+Vector Variance
 
-local reasoning behaviors（Layers 1–5）
+Intervention Efficacy
 
-external control（Layer 6）
+Semantic Field Potential
 
-global semantic topology（Layer 7）
+Failure Mode formalization:
 
-🧹 Removed
+Attention Collapse
 
-No features removed in this version.
+Semantic Drift
 
-V3 is an additive, backward-compatible expansion from V2.
+Hallucination Attractors
 
-📚 Notes
+🧩 Changed
 
-This Universal Edition contains only model-agnostic reasoning structures.
+Documentation reorganized into a formal academic structure.
 
-Framework extensions (e.g., persona, multi-agent, symbolic overlays) are not included here.
+Added notation table and domain definitions.
 
-A “Specialized Edition” may be created for system-specific cognitive overlays（e.g., narrative models、multi-persona frameworks）.
+[3.0.0] — Universal Edition Released — 2025-12-03
+🌐 First complete publication of the Grey-Box Framework
+🔥 Added
 
-[2.x.x] — Pre-V3 Internal Drafts
-(Not formally published)
+Full 7-layer interpretability stack.
 
-Implemented the original six-layer grey-box model：
+Concepts:
 
 Semantic Nodes
 
@@ -116,35 +121,17 @@ Semantic Flow
 
 Weight Heatmap
 
-Flow Velocity Field
+Flow Velocity
 
 Intervention Ring
 
-Focused on the interpretability of Transformer attention and token-level reasoning.
+Semantic Field
 
-Served as the conceptual foundation for V3.
+Failure Mode diagnostics (non-formal version).
 
-[1.x.x] — Prototype Phase（Unpublished）
+Initial documentation & repo structure.
 
-Personal research notes.
+📌 Notes
 
-Experimental visualization concepts.
-
-Not included in public documentation.
-
-📌 Versioning Policy
-
-Grey-Box Framework follows semantic versioning（SemVer）:
-
-MAJOR.MINOR.PATCH
-
-
-MAJOR：New layers, new reasoning structures
-
-MINOR：New diagrams, new visualization tools
-
-PATCH：Terminology clean-up / small corrections
-
-📎 End of CHANGELOG
-
-（This file will grow as additional releases are published.）
+This changelog covers accumulated developments in the Universal Grey-Box Series (V3.x).
+Older experimental versions (pre-V3) are archived and not part of this file.
