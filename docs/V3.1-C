@@ -1,0 +1,647 @@
+Grey-Box Visualization Framework V3.1 — Formal Supplement
+（V3.1-C：語義形式化補充 · Categorical & Metric Extension）
+
+Color Theme：Grey-Box / 深灰 #444444、青灰 #4FA3A5、銀白 #DDE2E5
+
+0. 檔案目的（Purpose）
+
+本補充檔案提供：
+
+V3.1 的形式化結構（公式化語義、範疇論、態射組合）
+
+研究者可讀、可推論的語義框架
+
+給 LLM 的內部 API 版本 → 可作為自我檢查的語義流程圖
+
+Grey-Box 設計哲學一致的視覺化語義模型
+
+加入 ASCII 圖示，使模型能於純文字環境呈現流程結構
+
+本檔案 不修改 V3.1 主規格，而是提供「可用、可精煉、可演算」的補充框架。
+
+1. 語義狀態範疇 
+𝑆
+S（Semantic State Category）
+1.1 語義狀態（Object）
+
+每一個語義瞬間定義為：
+
+𝑠
+=
+(
+𝑐
+,
+ℎ
+𝑡
+,
+𝑃
+𝑡
+)
+s=(c,h
+t
+	​
+
+,P
+t
+	​
+
+)
+
+𝑐
+c：上下文快照（context snapshot）
+
+ℎ
+𝑡
+h
+t
+	​
+
+：向量化語義狀態（hidden / embedding）
+
+𝑃
+𝑡
+P
+t
+	​
+
+：輸出概率分布（probabilities / logits）
+
+1.2 語義範疇定義
+𝑆
+=
+{
+𝑠
+∣
+𝑠
+ 為模型可區辨的語義瞬態
+}
+S={s∣s 為模型可區辨的語義瞬態}
+
+語義轉換視為態射：
+
+𝑓
+:
+𝑠
+𝑖
+→
+𝑠
+𝑗
+f:s
+i
+	​
+
+→s
+j
+	​
+
+ASCII 示意圖：語義狀態空間
+   ┌─────────────────────────── Semantic State Category 𝒮 ────────────────────────────┐
+   │                                                                                   │
+   │   (c, h_t, P_t) ──f1──▶ (c', h_{t+1}, P_{t+1}) ──f2──▶ (c'', h_{t+2}, P_{t+2})    │
+   │        │                                  │                                      │
+   │      Noise                              Flow                                 Output │
+   │                                                                                   │
+   └───────────────────────────────────────────────────────────────────────────────────┘
+
+2. 七層態射（Layer Morphisms in V3.1）
+
+V3.1 的七層視覺化流程可視為七個態射：
+
+Layer	態射	意義
+N	
+𝑓
+𝑁
+:
+𝑆
+→
+𝑁
+f
+N
+	​
+
+:S→N	雜訊抽取（noise pattern）
+A	
+𝑓
+𝐴
+:
+𝑁
+→
+𝐴
+f
+A
+	​
+
+:N→A	注意力結構
+F	
+𝑓
+𝐹
+:
+𝐴
+→
+𝐹
+f
+F
+	​
+
+:A→F	語義流向
+W	
+𝑓
+𝑊
+:
+𝐹
+→
+𝑊
+f
+W
+	​
+
+:F→W	權重與影響力
+V	
+𝑓
+𝑉
+:
+𝑊
+→
+𝑉
+f
+V
+	​
+
+:W→V	變異度、穩定性
+∇	
+𝑓
+∇
+:
+𝑉
+→
+𝐺
+f
+∇
+	​
+
+:V→G	語義位移（非梯度）
+S	
+𝑓
+𝑆
+:
+𝐺
+→
+𝑃
+f
+S
+	​
+
+:G→P	語義場域位置（semantic field）
+
+七層組合成：
+
+𝐹
+=
+𝑓
+𝑆
+∘
+𝑓
+∇
+∘
+𝑓
+𝑉
+∘
+𝑓
+𝑊
+∘
+𝑓
+𝐹
+∘
+𝑓
+𝐴
+∘
+𝑓
+𝑁
+F=f
+S
+	​
+
+∘f
+∇
+	​
+
+∘f
+V
+	​
+
+∘f
+W
+	​
+
+∘f
+F
+	​
+
+∘f
+A
+	​
+
+∘f
+N
+	​
+
+ASCII 示意圖：七層態射組合
+ Input
+   │
+   ▼
+[ N ] ───▶ Noise Extraction
+   │
+   ▼
+[ A ] ───▶ Attention Shape
+   │
+   ▼
+[ F ] ───▶ Semantic Flow
+   │
+   ▼
+[ W ] ───▶ Weight / Influence Map
+   │
+   ▼
+[ V ] ───▶ Stability / Variance Analysis
+   │
+   ▼
+[ ∇ ] ───▶ Semantic Shift (~gradient-like)
+   │
+   ▼
+[ S ] ───▶ Semantic Field Position (Potential Φ)
+   │
+ Output
+
+
+風格採 Grey-Box 經典深灰底 × 青灰流線感。
+
+3. 語義度量（Semantic Metrics）
+
+以下度量可供模型與研究者共同使用。
+
+3.1 Flow Coherence 
+𝐶
+𝐹
+(
+𝑡
+)
+C
+F
+	​
+
+(t)
+𝐶
+𝐹
+(
+𝑡
+)
+∈
+[
+−
+1
+,
+1
+]
+C
+F
+	​
+
+(t)∈[−1,1]
+
+1 → 完全一致
+
+0 → 開始漂移
+
+-1 → 語義反轉（矛盾）
+
+3.2 Attention Spread 
+𝑆
+𝐴
+S
+A
+	​
+
+𝑆
+𝐴
+=
+activated heads
+total heads
+S
+A
+	​
+
+=
+total heads
+activated heads
+	​
+
+
+0 → collapse（警告）
+1 → 過度分散（效率下降）
+
+3.3 Semantic Potential 
+Φ
+𝑆
+(
+𝑥
+)
+Φ
+S
+	​
+
+(x)
+
+類似「位置能量」，描述語義場谷底：
+
+低點：合理語義
+
+極低 → 幻覺吸引谷（hallucination attractor）
+
+高點 → 漂移、高不確定性
+
+4. 失效模式（Formal Failure Patterns）
+4.1 Attention Collapse
+
+條件：
+
+𝑆
+𝐴
+(
+𝑡
+)
+→
+0
+S
+A
+	​
+
+(t)→0
+
+且
+
+𝑑
+𝐶
+𝐹
+𝑑
+𝑡
+<
+0
+dt
+dC
+F
+	​
+
+	​
+
+<0
+
+症狀：
+
+回答忽然變非常單一
+
+推論鏈斷裂
+
+4.2 Semantic Drift
+𝐶
+𝐹
+(
+𝑡
+)
+→
+0
+C
+F
+	​
+
+(t)→0
+∣
+Φ
+𝑆
+(
+𝑥
+𝑡
++
+1
+)
+−
+Φ
+𝑆
+(
+𝑥
+𝑡
+)
+∣
+≫
+𝜖
+∣Φ
+S
+	​
+
+(x
+t+1
+	​
+
+)−Φ
+S
+	​
+
+(x
+t
+	​
+
+)∣≫ϵ
+
+症狀：
+
+題目 A → 回答跑到 B、C
+
+風格、主題不穩
+
+4.3 Hallucination Attractor（幻覺吸引谷底）
+
+條件：
+
+Φ
+𝑆
+(
+𝑥
+)
+=
+min
+⁡
+(
+local basin
+)
+Φ
+S
+	​
+
+(x)=min(local basin)
+
+且
+
+𝐻
+(
+𝑃
+𝑡
+)
+≈
+0
+H(P
+t
+	​
+
+)≈0
+
+症狀：
+
+極度自信但錯誤
+
+語義卡住無法跳出
+
+5. 語義干預（Intervention as Natural Transformations）
+
+模型推理：
+
+𝐹
+:
+𝐼
+→
+𝑆
+F:I→S
+
+干預後：
+
+𝐹
+′
+:
+𝐼
+→
+𝑆
+F
+′
+:I→S
+
+干預本體：
+
+𝜂
+:
+𝐹
+⇒
+𝐹
+′
+η:F⇒F
+′
+
+自然性方塊（commuting square）表示：
+
+對所有輸入，干預都以一致方式作用，不會破壞推理結構。
+
+6. LLM 內部 API 版本（Semantic API for LLMs）
+
+這份 API 讓模型在推理時能「自我檢查並回報」。
+
+6.1 API：取樣語義快照
+GET /semantic/snapshot
+→ returns { context, hidden_state, logits }
+
+6.2 API：七層態射輸出
+POST /semantic/pipeline
+→ returns {
+   N_noise,
+   A_attention,
+   F_flow,
+   W_weightmap,
+   V_variance,
+   G_shift,
+   S_field
+}
+
+6.3 API：失效預警
+GET /semantic/anomaly
+→ returns {
+    risk_level: ["low","medium","high"],
+    drift_score,
+    collapse_score,
+    hallucination_score
+}
+
+6.4 API：語義場位置
+GET /semantic/field
+→ returns { potential: Φ, basin_id, stability }
+
+7. Grey-Box 視覺風格（Color & Layout Guide）
+
+研究文件常見三色標記：
+
+名稱	色碼	用途
+Grey-Box Deep	#444444	背景、邊線、框架
+Cyan-Grey	#4FA3A5	流向箭頭、態射
+Silver	#DDE2E5	註解、補充、標線
+
+Markdown 無法強制色彩，但可用如下格式註記：
+
+<color #4FA3A5>Semantic Flow</color>
+
+
+或在圖下附說明：
+
+(青灰色箭頭代表語義流向)
+
+8. 附錄：大型 ASCII 全流程圖
+                              ┌──────────────────────────────────┐
+                              │   Grey-Box Visualization V3.1    │
+                              │     Formal Semantic Pipeline      │
+                              └──────────────────────────────────┘
+
+Input Text
+    │
+    ▼
+┌───N──────────────────────────────┐
+│ Noise Extraction                  │
+└───────────────────────────────────┘
+    │
+    ▼
+┌───A──────────────────────────────┐
+│ Attention Map & Head Pattern      │
+└───────────────────────────────────┘
+    │
+    ▼
+┌───F──────────────────────────────┐
+│ Semantic Flow (Directional)       │
+└───────────────────────────────────┘
+    │
+    ▼
+┌───W──────────────────────────────┐
+│ Weight / Influence Distribution   │
+└───────────────────────────────────┘
+    │
+    ▼
+┌───V──────────────────────────────┐
+│ Variance / Stability Analysis     │
+└───────────────────────────────────┘
+    │
+    ▼
+┌───∇──────────────────────────────┐
+│ Gradient-like Semantic Shift      │
+└───────────────────────────────────┘
+    │
+    ▼
+┌───S──────────────────────────────┐
+│ Semantic Field & Potential Φ      │
+└───────────────────────────────────┘
+    │
+    ▼
+Output Response
+
+9. 結語
+
+本補充檔讓：
+
+研究者
+能以形式化方法理解 Grey-Box 的語義進程。
+
+LLM / API
+能將語義流程拆解成可稽核、可回報、可診斷的結構。
+
+Grey-Box 概念
+成為 理解模型內部語義的橋樑。
